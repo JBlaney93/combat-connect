@@ -10,7 +10,7 @@ pnpm dev
 Right now, a basic database is included in the first commit but I think moving forward
 we will be better to have our own local db and not include this file in commits.
 
-When you pull the code there might be a bd file already.
+When you pull the code there might be a db file already.
 
 If not follow the steps to set up the db locally.
 

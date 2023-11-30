@@ -17,7 +17,7 @@ const db = drizzle(sqlite);
 export default function Home() {
   const allUsers = db.select().from(users).all();
 
-  console.log(process.env.DB);
+  // console.log(process.env.DB);
 
   const action = async (formData: FormData) => {
     "use server";
@@ -52,9 +52,7 @@ export default function Home() {
 
   return (
     <>
-      <NavBar />
-
-      <main className="flex flex-col gap-8 px-7 mt-8 max-w-7xl">
+      <main className="flex flex-col gap-8 px-10 mt-8 max-w-7xl">
         <h1 className="text-2xl">Fighters</h1>
 
         <div className="flex gap-4">
