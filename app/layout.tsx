@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <main className="max-w-screen flex flex-col items-start ">
+        {children}
+      </main>
     </html>
   );
 }
