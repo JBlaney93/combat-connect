@@ -1,17 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function NavBar() {
   return (
-    <nav className="bg-slate-50 w-full">
-      <div className="flex justify-between items-center text-xl text-accentColour px-10 h-20 max-w-7xl">
-        <Link href="/" className="py-4 px-2">
-          {/* <Image src="" width={80} height={80} alt="Website Logo" /> */}
-          Combat Connect
-        </Link>
+    <div className="flex items-center text-2xl text-white gap-4 max-w-7xl mx-auto my-0">
+      <Link href="/" className="py-6 px-4 cursor-pointer">
+        Combat Connect
+      </Link>
 
-        <Link href="/users/fighter-list">Fighters</Link>
-      </div>
-    </nav>
+      <Link className="py-6 px-4 cursor-pointer" href="/users/fighters">
+        Fighters
+      </Link>
+    </div>
   );
 }
