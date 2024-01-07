@@ -20,7 +20,7 @@ export default function FighterList() {
       <div className="flex flex-col gap-2">
         {allUsers.map((user) => {
           return (
-            <li className="list-none" id={user.id.toString()}>
+            <li className="list-none" key={user.id}>
               {user.id} {user.firstName} {user.lastName}
             </li>
           );
