@@ -17,22 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <nav className=" bg-slate-500 w-full">
-        <div className="max-w-7xl mx-auto my-0 px-6">
-          <NavBar />
-        </div>
-      </nav>
-
-      <main className="flex flex-col max-w-7xl mx-auto my-0 px-6 min-h-[calc(100vh-160px)]">
-        <div className="flex-1">{children}</div>
-      </main>
-
-      <footer className=" bg-slate-50 w-full">
-        <div className="max-w-7xl mx-auto my-0 px-6">
-          <Footer />
-        </div>
-      </footer>
-    </>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
