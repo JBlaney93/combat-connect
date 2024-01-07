@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: black;
-  background:rgb(219, 227, 219);
+  body {
+    color: #252627;
+    margin: 0;
+    font-family: 'YourPreferredFont', sans-serif; 
+    background-color: #FFF9FB; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
