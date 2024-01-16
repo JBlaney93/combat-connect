@@ -12,7 +12,7 @@ export default function UpdateEvent() {
     "use server";
 
     const name = formData.get("name")?.toString();
-    const updatedName = formData.get("name")?.toString();
+    const updatedName = formData.get("updatedName")?.toString();
 
     await db
       .update(events)
@@ -33,25 +33,11 @@ export default function UpdateEvent() {
         placeholder="Name"
         className="p-1 max-w-sm"
       />
-      <label htmlFor="location">Location</label>
+      <label htmlFor="updatedName" />
       <input
-        name="location"
-        id="location"
-        placeholder="location"
-        className="p-1 max-w-sm"
-      />
-      <label htmlFor="date">Date</label>
-      <input
-        name="date"
-        id="date"
-        placeholder="date"
-        className="p-1 max-w-sm"
-      />
-      <label htmlFor="organiser">Organiser</label>
-      <input
-        name="organiser"
-        id="organiser"
-        placeholder="organiser"
+        name="updatedName"
+        id="updatedName"
+        placeholder="New Name"
         className="p-1 max-w-sm"
       />
       <button
