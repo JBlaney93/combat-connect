@@ -19,7 +19,9 @@ export default function AddEvent() {
   };
 
   return (
-    <form className="" action={saveEvent}>
+    <form
+      className="flex flex-col w-full gap-4 p-4 border border-black rounded-sm bg-sky-100"
+      action={saveEvent}>
       <h1 className="text-xl">Create an Event</h1>
       <label htmlFor="name">Event Name</label>
       <input
