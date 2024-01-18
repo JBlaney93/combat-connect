@@ -10,5 +10,13 @@ CREATE TABLE `users` (
 	`first_name` text,
 	`last_name` text
 );
+
+CREATE TABLE `events` (
+	`id` integer PRIMARY KEY NOT NULL,
+	`name` text,
+	`location` text,
+	`date` text,
+	`organiser` text
+);
 --> statement-breakpoint
 CREATE UNIQUE INDEX `nameIdx` ON `users` (`last_name`);

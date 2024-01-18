@@ -14,3 +14,16 @@ export const gyms = sqliteTable('gyms', {
   name: text('name'),
   userId: integer('user_id').references(() => users.id),
 })
+
+export const events = sqliteTable('events', {
+  id: integer('id').primaryKey(),
+  name: text('name'),
+  location: text('location'),
+  date: text('date'),
+  organiser: text('organiser'), // promoter?
+});
+
+export const usersToEvent = sqliteTable('events_users', {
+  userId: integer('user_id').references(() => users.id),
+  eventId: integer('event_id').references(() => events.id),
+});
