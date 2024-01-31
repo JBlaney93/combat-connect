@@ -11,9 +11,9 @@ export default function DeleteFighter() {
   const deleteUserByName = async (formData: FormData) => {
     "use server";
 
-    const firstName = formData.get("firstName")?.toString();
+    const id = formData.get("id");
 
-    await db.delete(users).where(eq(users.firstName, `${firstName}`));
+    await db.delete(users).where(eq(users.id, Number(id)));
     redirect("/users/fighters");
   };
 
@@ -23,11 +23,11 @@ export default function DeleteFighter() {
       action={deleteUserByName}
     >
       <h1 className="text-xl">Delete a Fighter</h1>
-      <label htmlFor="firstName" />
+      <label htmlFor="id" />
       <input
-        name="firstName"
-        id="firstName"
-        placeholder="First Name"
+        name="id"
+        id="id"
+        placeholder="Id of fighter to delete"
         className="p-1 max-w-sm"
       />
       <button
