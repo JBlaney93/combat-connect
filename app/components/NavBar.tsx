@@ -2,22 +2,29 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="text-2xl bg-navBackgroundGrey">
-      <div className="flex items-center gap-4 max-w-screen-xl mx-auto my-0 w-full px-6">
+    <nav className="text-xl bg-navBackgroundRaisinBlack">
+      <div className="flex justify-evenly">
         <Link
           href="/"
-          className="py-4 px-4 cursor-pointer hover:bg-navBackgroundGreyHover">
+          className="py-4 px-4 font-bold text-slate-50 cursor-pointer hover:text-yellow-500 hover:bg-slate-500">
           Combat Connect
         </Link>
+        <div className="flex gap-4">
+          <Link
+            className="py-4 px-4 text-slate-50 cursor-pointer hover:text-yellow-500 hover:bg-slate-500"
+            href="/users/fighters">
+            Fighters
+          </Link>
+          <Link
+            className="py-4 px-4 text-slate-50 cursor-pointer hover:text-yellow-500 hover:bg-slate-500"
+            href="/events">
+            Event
+          </Link>
+        </div>
         <Link
-          className="py-4 px-4 cursor-pointer hover:bg-navBackgroundGreyHover"
-          href="/users/fighters">
-          Fighters
-        </Link>
-        <Link
-          className="py-4 px-4 cursor-pointer hover:bg-navBackgroundGreyHover"
-          href="/events">
-          Event
+          className="py-4 px-4 text-slate-50 cursor-pointer hover:text-yellow-500 hover:bg-slate-500"
+          href="/">
+          Log Out
         </Link>
       </div>
     </nav>
